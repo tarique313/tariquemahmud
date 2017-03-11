@@ -1,5 +1,5 @@
 # README
 
-Personal Website of Gazi Tarique Mahmud
+Gazi Tarique Mahmud
 
 * http://www.tarique.net
