@@ -1,5 +1,5 @@
 module DefaultPageContent
-	extend ActriveSupport::Concern
+	extend ActiveSupport::Concern
 
 	included do
 		before_filter :set_page_defaults
