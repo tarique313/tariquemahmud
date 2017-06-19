@@ -30,6 +30,7 @@ layout "portfolio"
 
   def edit
     @portfolio_item = Portfolio.find(params[:id])
+    #4.times { @portfolio_item.technologies.build}
   end
 
   def show
