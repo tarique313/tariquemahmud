@@ -16,4 +16,9 @@ def source_helper(layout_name)
 	end
 end
 
+def copyright_generator
+TariqueViewTool::Renderer.copyright 'Gazi Tarique Mahmud' , 'All rights reserved'
+	
+end
+
 end
