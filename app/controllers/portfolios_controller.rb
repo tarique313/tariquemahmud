@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+before_action :set_portfolio_items, only: [:edit, :update, :show, :destroy]
 layout "portfolio"
   def index
     @portfolio_items = Portfolio.all
@@ -29,15 +30,12 @@ layout "portfolio"
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
     #4.times { @portfolio_item.technologies.build}
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
 
     @portfolio_item.destroy
     respond_to do |format|
@@ -45,7 +43,6 @@ layout "portfolio"
     end
   end
   def update
-  @portfolio_item = Portfolio.find(params[:id])
     if @portfolio_item.update(portfolio_params)
       redirect_to portfolios_path, notice: "Portfolio updated successfully!"
     else
@@ -55,5 +52,9 @@ layout "portfolio"
 
   def portfolio_params
     params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+  end
+
+  def set_portfolio_items
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end
