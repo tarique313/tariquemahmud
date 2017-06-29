@@ -156,6 +156,32 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 75rem;
+    width: 65rem;
   }
+}
+
+
+/*
+ * Custom styles
+ */
+
+.card-block {
+  color: black;
+  text-align: left;
+}
+
+body{
+  font-size: 12px;
+  padding-top: 80px; 
+  padding-bottom: 42px;
+
+}
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
+.auth-links a{
+  color: black;
+}
+.card-group [class*='col-'] {
+  float:none;
 }
