@@ -170,12 +170,23 @@ body {
   text-align: left;
 }
 
+.register-text {
+  text-align: "right";
+}
+
 body{
   font-size: 12px;
   padding-top: 80px; 
   padding-bottom: 42px;
 
 }
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+
 @media screen and (max-width: 768px) {
     body { padding-top: 0px; }
 }
