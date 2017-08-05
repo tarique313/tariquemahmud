@@ -5,21 +5,20 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem 'rails', '~> 5.0.1'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'coffee-rails', '~> 4.2'
+gem 'devise', '~> 4.3'
+gem 'friendly_id', '~> 5.1.0'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
+gem 'petergate', '~> 1.7', '>= 1.7.5'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
-gem 'friendly_id', '~> 5.1.0'
-gem 'devise', '~> 4.3'
-gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'tarique_view_tool', '~> 0.1.0'
-gem 'petergate', '~> 1.7', '>= 1.7.5'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3.0'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
@@ -30,10 +29,12 @@ group :development, :test do
 end
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  # Access an IRB console on exception pages or by using <%= console %> anywhere
+  # in the code.
   gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'web-console', '>= 3.3.0'
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

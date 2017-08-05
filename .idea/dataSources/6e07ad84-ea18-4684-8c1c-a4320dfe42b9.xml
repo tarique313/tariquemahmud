@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails tariquemahmud: test">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="tariquemahmud_test">
+      <ObjectId>24594</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-07-11.15:07:20.942</IntrospectionTimestamp>
+      <IntrospectionStateNumber>732</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12119</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="blogs_id_seq">
+      <ObjectId>32869</ObjectId>
+      <StateNumber>714</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="friendly_id_slugs_id_seq">
+      <ObjectId>32883</ObjectId>
+      <StateNumber>717</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="11" parent="3" name="portfolios_id_seq">
+      <ObjectId>32898</ObjectId>
+      <StateNumber>722</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="12" parent="3" name="skills_id_seq">
+      <ObjectId>32909</ObjectId>
+      <StateNumber>723</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="13" parent="3" name="technologies_id_seq">
+      <ObjectId>32920</ObjectId>
+      <StateNumber>724</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="3" name="topics_id_seq">
+      <ObjectId>32932</ObjectId>
+      <StateNumber>726</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="15" parent="3" name="ar_internal_metadata">
+      <ObjectId>32961</ObjectId>
+      <StateNumber>732</StateNumber>
+    </table>
+    <table id="16" parent="3" name="blogs">
+      <ObjectId>32871</ObjectId>
+      <StateNumber>727</StateNumber>
+    </table>
+    <table id="17" parent="3" name="friendly_id_slugs">
+      <ObjectId>32885</ObjectId>
+      <StateNumber>717</StateNumber>
+    </table>
+    <table id="18" parent="3" name="portfolios">
+      <ObjectId>32900</ObjectId>
+      <StateNumber>728</StateNumber>
+    </table>
+    <table id="19" parent="3" name="schema_migrations">
+      <ObjectId>32953</ObjectId>
+      <StateNumber>729</StateNumber>
+    </table>
+    <table id="20" parent="3" name="skills">
+      <ObjectId>32911</ObjectId>
+      <StateNumber>723</StateNumber>
+    </table>
+    <table id="21" parent="3" name="technologies">
+      <ObjectId>32922</ObjectId>
+      <StateNumber>728</StateNumber>
+    </table>
+    <table id="22" parent="3" name="topics">
+      <ObjectId>32934</ObjectId>
+      <StateNumber>727</StateNumber>
+    </table>
+    <column id="23" parent="15" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>732</StateNumber>
+    </column>
+    <column id="24" parent="15" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>732</StateNumber>
+    </column>
+    <column id="25" parent="15" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>732</StateNumber>
+    </column>
+    <column id="26" parent="15" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>732</StateNumber>
+    </column>
+    <index id="27" parent="15" name="ar_internal_metadata_pkey">
+      <ObjectId>32967</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="15" name="ar_internal_metadata_pkey">
+      <ObjectId>32968</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>714</StateNumber>
+      <SequenceName>blogs_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;blogs_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="30" parent="16" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="31" parent="16" name="body">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="32" parent="16" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="33" parent="16" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="34" parent="16" name="slug">
+      <Position>6</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="35" parent="16" name="status">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>714</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="36" parent="16" name="topic_id">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>714</StateNumber>
+    </column>
+    <index id="37" parent="16" name="blogs_pkey">
+      <ObjectId>32879</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="16" name="index_blogs_on_slug">
+      <ObjectId>32881</ObjectId>
+      <ColNames>slug</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="39" parent="16" name="index_blogs_on_topic_id">
+      <ObjectId>32882</ObjectId>
+      <ColNames>topic_id</ColNames>
+    </index>
+    <key id="40" parent="16" name="blogs_pkey">
+      <ObjectId>32880</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>blogs_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="16" name="fk_rails_7f5637ea0d">
+      <ObjectId>32943</ObjectId>
+      <ColNames>topic_id</ColNames>
+      <RefTableName>topics</RefTableName>
+      <RefKeyName>topics_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="42" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>717</StateNumber>
+      <SequenceName>friendly_id_slugs_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;friendly_id_slugs_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="43" parent="17" name="slug">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>717</StateNumber>
+    </column>
+    <column id="44" parent="17" name="sluggable_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>717</StateNumber>
+    </column>
+    <column id="45" parent="17" name="sluggable_type">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>717</StateNumber>
+    </column>
+    <column id="46" parent="17" name="scope">
+      <Position>5</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>717</StateNumber>
+    </column>
+    <column id="47" parent="17" name="created_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>717</StateNumber>
+    </column>
+    <index id="48" parent="17" name="friendly_id_slugs_pkey">
+      <ObjectId>32892</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="17" name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope">
+      <ObjectId>32894</ObjectId>
+      <ColNames>slug
+sluggable_type
+scope</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="50" parent="17" name="index_friendly_id_slugs_on_slug_and_sluggable_type">
+      <ObjectId>32895</ObjectId>
+      <ColNames>slug
+sluggable_type</ColNames>
+    </index>
+    <index id="51" parent="17" name="index_friendly_id_slugs_on_sluggable_id">
+      <ObjectId>32896</ObjectId>
+      <ColNames>sluggable_id</ColNames>
+    </index>
+    <index id="52" parent="17" name="index_friendly_id_slugs_on_sluggable_type">
+      <ObjectId>32897</ObjectId>
+      <ColNames>sluggable_type</ColNames>
+    </index>
+    <key id="53" parent="17" name="friendly_id_slugs_pkey">
+      <ObjectId>32893</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>friendly_id_slugs_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>722</StateNumber>
+      <SequenceName>portfolios_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;portfolios_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="55" parent="18" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="56" parent="18" name="subtitle">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="57" parent="18" name="body">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="58" parent="18" name="main_image">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="59" parent="18" name="thumb_image">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="60" parent="18" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>722</StateNumber>
+    </column>
+    <column id="61" parent="18" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>722</StateNumber>
+    </column>
+    <index id="62" parent="18" name="portfolios_pkey">
+      <ObjectId>32907</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="63" parent="18" name="portfolios_pkey">
+      <ObjectId>32908</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>portfolios_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="19" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>729</StateNumber>
+    </column>
+    <index id="65" parent="19" name="schema_migrations_pkey">
+      <ObjectId>32959</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="19" name="schema_migrations_pkey">
+      <ObjectId>32960</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>723</StateNumber>
+      <SequenceName>skills_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;skills_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="68" parent="20" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>723</StateNumber>
+    </column>
+    <column id="69" parent="20" name="percent_utilized">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>723</StateNumber>
+    </column>
+    <column id="70" parent="20" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>723</StateNumber>
+    </column>
+    <column id="71" parent="20" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>723</StateNumber>
+    </column>
+    <column id="72" parent="20" name="badge">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>723</StateNumber>
+    </column>
+    <index id="73" parent="20" name="skills_pkey">
+      <ObjectId>32918</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="20" name="skills_pkey">
+      <ObjectId>32919</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>skills_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="75" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>724</StateNumber>
+      <SequenceName>technologies_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;technologies_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="76" parent="21" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>724</StateNumber>
+    </column>
+    <column id="77" parent="21" name="portfolio_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>724</StateNumber>
+    </column>
+    <column id="78" parent="21" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>724</StateNumber>
+    </column>
+    <column id="79" parent="21" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>724</StateNumber>
+    </column>
+    <index id="80" parent="21" name="technologies_pkey">
+      <ObjectId>32929</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="81" parent="21" name="index_technologies_on_portfolio_id">
+      <ObjectId>32931</ObjectId>
+      <ColNames>portfolio_id</ColNames>
+    </index>
+    <key id="82" parent="21" name="technologies_pkey">
+      <ObjectId>32930</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>technologies_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="83" parent="21" name="fk_rails_cc5ab4a1c3">
+      <ObjectId>32948</ObjectId>
+      <ColNames>portfolio_id</ColNames>
+      <RefTableName>portfolios</RefTableName>
+      <RefKeyName>portfolios_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="84" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+      <SequenceName>topics_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;topics_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="85" parent="22" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>726</StateNumber>
+    </column>
+    <column id="86" parent="22" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+    </column>
+    <column id="87" parent="22" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>726</StateNumber>
+    </column>
+    <index id="88" parent="22" name="topics_pkey">
+      <ObjectId>32941</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="22" name="topics_pkey">
+      <ObjectId>32942</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>topics_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
