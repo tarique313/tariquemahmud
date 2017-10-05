@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
-  resources :portfolios, except: [:show]
+ resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   get 'ruby_on_rails_portfolio_items', to: "portfolios#ror"
   get 'penetration_testing_portfolio_items', to: 'portfolios#pentest_portfolio_items' 
   get 'portfolios/:id', to: 'portfolios#show', as: 'portfolio_show'
