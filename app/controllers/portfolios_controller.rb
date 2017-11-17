@@ -64,7 +64,7 @@ def update
 end
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:portfolio).permit(:title, :subtitle, :main_image, :thumb_image,:body, technologies_attributes: [:name])
   end
 
   def set_portfolio_items
