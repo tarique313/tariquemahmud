@@ -167,6 +167,7 @@ body {
 .card-block {
   color: black;
   text-align: left;
+  padding: .75rem;
 }
 
 .register-text {
@@ -191,6 +192,7 @@ body{
 }
 .auth-links a{
   color: black;
+  padding:  1rem;
 }
 .card-group [class*='col-'] {
   float:none;

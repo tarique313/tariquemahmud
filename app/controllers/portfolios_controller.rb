@@ -3,7 +3,9 @@ class PortfoliosController < ApplicationController
 before_action :set_portfolio_items, only: [:edit, :update, :show, :destroy]
 layout "portfolio"
 
-access all: [:show, :index, :ror, :pentest_portfolio_items], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
+access all: [:show, :index, :ror, :pentest_portfolio_items], 
+       user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, 
+       site_admin: :all
 
 def index
   @portfolio_items = Portfolio.by_position
@@ -26,7 +28,6 @@ end
 
 def new 
   @portfolio_item = Portfolio.new
-  4.times { @portfolio_item.technologies.build}
 end
 
 def create
@@ -34,7 +35,7 @@ def create
   respond_to do |format|
     if @portfolio_item.save!
       format.html { redirect_to @portfolio_item, notice: "Your portfolio is now live!"}
-    else  
+    else
       format.html { render :new }
     end
   end
@@ -63,8 +64,16 @@ def update
   end
 end
 
-  def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :main_image, :thumb_image,:body, technologies_attributes: [:name])
+
+def portfolio_params
+  params.require(:portfolio).permit(
+                                    :title, 
+                                    :subtitle, 
+                                    :main_image, 
+                                    :thumb_image,
+                                    :body, 
+                                    technologies_attributes: [:name, :name, :_destroy]
+                                    )
   end
 
   def set_portfolio_items
