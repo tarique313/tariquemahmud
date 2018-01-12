@@ -29,6 +29,7 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.1'
 gem 'mini_magick', '~> 4.8'
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
+gem 'twitter', '~> 6.1'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
