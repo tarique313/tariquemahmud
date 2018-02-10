@@ -9,6 +9,7 @@ access all: [:show, :index, :ror, :pentest_portfolio_items],
 
 def index
   @portfolio_items = Portfolio.by_position
+  
 end
 
 def sort
