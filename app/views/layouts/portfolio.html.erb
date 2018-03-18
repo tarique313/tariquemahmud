@@ -12,20 +12,15 @@
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
   <%= render 'shared/blog_nav' %>
-    <%= render 'shared/blog_masthead' unless logged_in?(:site_admin) %>
-
-      <%= yield %>
-
-        <%= render 'shared/blog_footer' %>
-
-          <%= alerts %>
-
-            <%= source_helper("application") %>
+  <%= render 'shared/blog_masthead' unless logged_in?(:site_admin) %>
+  <%= yield %>
+  <%= render 'shared/blog_footer' %>
+  <%= alerts %>
 </body>
 
 </html>
