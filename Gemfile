@@ -33,6 +33,8 @@ gem 'twitter', '~> 6.1'
 gem 'redis', '~> 3.3', '>= 3.3.1'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'popper_js'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
